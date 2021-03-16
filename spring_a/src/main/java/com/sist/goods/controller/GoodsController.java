@@ -22,6 +22,15 @@ public class GoodsController {
 	public void setDao(GoodsDao dao) {
 		this.dao = dao;
 	}
+	
+	// by 정소윤
+	@RequestMapping("/detailGoods.do")
+	public ModelAndView detail(int no) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("g",dao.select(no));
+		return mav;
+	}
+	
 
 	@RequestMapping("/listGoods.do")
 	public ModelAndView listGoods(String keyword, String orderFeild, HttpSession session, HttpServletResponse response, HttpServletRequest request) {		
@@ -41,6 +50,7 @@ public class GoodsController {
 		session.setAttribute("keyword", keyword);
 		return mav;
 	}
+	
 }
 
 

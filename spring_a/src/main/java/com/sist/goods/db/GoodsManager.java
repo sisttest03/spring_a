@@ -36,6 +36,14 @@ public class GoodsManager {
 		return list;
 	}
 	
+	// by 정소윤
+	public static GoodsVo select(int no) {
+		SqlSession session = factory.openSession();
+		GoodsVo g = session.selectOne("goods.select", no);
+		session.close();
+		return g;
+	}//select
+	
 }
 
 

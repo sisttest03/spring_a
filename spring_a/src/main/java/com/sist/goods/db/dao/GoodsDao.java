@@ -14,6 +14,11 @@ public class GoodsDao {
 	public List<GoodsVo> findAll(HashMap<String, Object> map){
 		return GoodsManager.findAll(map);
 	}
+	
+	// by 정소윤
+	public GoodsVo select(int no) {
+		return GoodsManager.select(no);
+	}
 }
 
 
