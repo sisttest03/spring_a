@@ -19,6 +19,7 @@ public class GoodsDao {
 	public GoodsVo select(int no) {
 		return GoodsManager.select(no);
 	}
+	
 }
 
 

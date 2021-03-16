@@ -13,5 +13,4 @@ public class GoodsVo {
 	private int qty;
 	private int price;
 	private String fname;
-	
 }
